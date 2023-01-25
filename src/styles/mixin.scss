@@ -27,9 +27,9 @@
   white-space: normal;
 }
 
-@mixin tag {
+@mixin gray-tag {
   color: $text-light-color;
-  background-color: $tag-bg-color;
+  background-color: $gray-tag-bg-color;
   border-radius: 2px;
   padding: 4px 8px;
   margin-right: 4px;
@@ -37,10 +37,21 @@
   line-height: 1.538;
 }
 
+@mixin green-tag {
+  color: $white;
+  background-color: $green-tag-bg-color;
+  border-radius: 5px;
+  padding: 0 8px;
+  margin-right: 4px;
+  font-size: 13px;
+  line-height: 1.846;
+}
+
 @mixin info-block {
   display: flex;
   flex-wrap: wrap;
   border-top: 1px solid $card-dividing-line;
-  padding: 16px;
   color: $text-light-color;
+  padding-top: 16px;
+  margin-top: 16px;
 }

@@ -1,16 +1,33 @@
 @import "styles/mixin";
 
-.store-card-container {
+.event-card-container {
   @include card-container;
-  max-width: 328px;
+  display: flex;
+  max-height: 257px;
+  margin: 30px;
 
   img {
-    max-width: 328px;
-    border-radius: 8px 8px 0 0;
+    max-height: 257px;
+    border-radius: 8px 0 0 8px;
   }
 
   .text-block {
     padding: 16px;
+  }
+
+  .date-row {
+    display: flex;
+    justify-content: space-between;
+
+    .date {
+      font-size: 22px;
+      color: gray;
+      font-weight: 700;
+    }
+    
+    .tag {
+      @include green-tag;
+    }
   }
 
   .main {
@@ -33,15 +50,5 @@
 
   .info {
     @include info-block;
-    
-    .time,
-    .phone {
-      width: 50%;
-    }
-
-    .address {
-      width: 100%;
-      margin-top: 16px;
-    }
   }
 }
