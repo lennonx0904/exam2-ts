@@ -1,4 +1,4 @@
-import { StoreCard, EventCard } from "components";
+import { StoreCard, EventCard, NewsCard } from "components";
 
 import "./style.scss";
 
@@ -7,6 +7,7 @@ const MainPage = () => {
     <div>
       <StoreCard />
       <EventCard />
+      <NewsCard />
     </div>
   );
 };

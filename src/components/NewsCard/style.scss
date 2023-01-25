@@ -1,0 +1,30 @@
+@import "styles/mixin";
+@import "styles/color";
+
+.news-card-container {
+  @include card-container;
+  padding: 16px;
+
+  // temp
+  width: 328px;
+
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+
+    .date {
+      font-size: 13px;
+      line-height: 1.846;
+      color: $black-light;
+    }
+  }
+
+  .title {
+    @include card-title;
+  }
+
+  .description {
+    @include card-description;
+    margin-bottom: 0;
+  }
+}
