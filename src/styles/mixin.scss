@@ -1,0 +1,46 @@
+@import "color";
+
+@mixin card-container {
+  color: $black;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0 $shadow-color;
+  background-color: $card-bg-color;
+}
+
+@mixin card-title {
+  color: $black;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+@mixin card-description {
+  color: $black-light;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 8px 0 43px;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+@mixin tag {
+  color: $text-light-color;
+  background-color: $tag-bg-color;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin-right: 4px;
+  font-size: 13px;
+  line-height: 1.538;
+}
+
+@mixin info-block {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid $card-dividing-line;
+  padding: 16px;
+  color: $text-light-color;
+}
