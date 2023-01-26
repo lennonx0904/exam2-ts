@@ -1,13 +1,25 @@
 @import "styles/color";
 
-.store-section {
-  background-color: $gray-3;
+.event-news-section {
+  display: flex;
+  background-color: $gray-1;
   padding: 50px 125px;
+
+  // TODO: RWD
+  .event-column {
+    margin-right: 24px;
+  }
 
   .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+
+    > p {
+      font-family: "NeuzeitGroteskW01-Regular";
+      font-size: 24px;
+      line-height: 24px;
+    }
 
     .btn {
       cursor: pointer;
@@ -19,7 +31,8 @@
   }
 
   .cards {
-    display: flex;
-    justify-content: space-between;
+    > div {
+      margin-bottom: 16px;
+    }
   }
 }

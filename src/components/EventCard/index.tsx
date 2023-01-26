@@ -1,3 +1,4 @@
+import { Icon } from "assets";
 import "./style.scss";
 
 const EventCard = () => {
@@ -8,11 +9,10 @@ const EventCard = () => {
       <div className="text-block">
         <div className="date-row">
           <div className="date">2019-11-29</div>
-          <div className="tag"> tag:status</div>
         </div>
 
         <div className="main">
-          <div className="title">title: Blickchester</div>
+          <div className="title">Blickchester</div>
           <p className="description">
             description: "I learn music.' 'Ah! that accounts for it,' said the
             March Hare said--' 'I didn't!' the March Hare. 'Sixteenth,' added
@@ -20,15 +20,22 @@ const EventCard = () => {
             it had.",
           </p>
           <div className="tag-row">
-            <div className="tag">tag1: Poochyena </div>
-            <div className="tag">tag2: Honchkrow </div>
-            <div className="tag">tag3: Shellder </div>
+            <div className="tag">Poochyena</div>
+            <div className="tag">Honchkrow</div>
+            <div className="tag">Shellder</div>
           </div>
         </div>
 
         <div className="info">
-          <div className="time">time: 05:15 - 23:00</div>
-          <div className="address">address: 489 Oma Turnpike</div>
+          <div>
+            <img src={Icon.time} className="" alt="time" />
+            <div className="time">05:15 - 23:00</div>
+          </div>
+
+          <div>
+            <img src={Icon.location} className="" alt="location" />
+            <div className="address">489 Oma Turnpike</div>
+          </div>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@
       color: gray;
       font-weight: 700;
     }
-    
+
     .tag {
       @include green-tag;
     }
@@ -49,5 +49,10 @@
 
   .info {
     @include info-block;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+    }
   }
 }
