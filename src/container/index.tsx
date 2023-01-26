@@ -1,14 +1,15 @@
-import { StoreCard, EventCard, NewsCard } from "components";
+import { StoreCard, EventCard, NewsCard, Navbar } from "components";
 
 import "./style.scss";
 
 const MainPage = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <StoreCard />
       <EventCard />
       <NewsCard />
-    </div>
+    </>
   );
 };
 

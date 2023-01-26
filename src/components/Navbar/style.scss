@@ -1,0 +1,39 @@
+@import "styles/mixin";
+@import "styles/color";
+
+.navbar {
+  display: flex;
+  height: 64px;
+  padding: 0 125px;
+
+  .logo {
+    @include card-title;
+    align-self: center;
+  }
+
+  .nav-content {
+    display: flex;
+    margin-left: 120px;
+
+    > div {
+      color: $navbar-item;
+      font-size: 14px;
+      align-self: center;
+      margin-right: 24px;
+      cursor: pointer;
+      line-height: 64px;
+      height: 64px;
+      box-sizing: content-box;
+    }
+
+    .current {
+      border-bottom: 4px solid $black;
+      height: 60px;
+    }
+  }
+
+  .avatar {
+    margin-left: auto;
+    align-self: center;
+  }
+}
