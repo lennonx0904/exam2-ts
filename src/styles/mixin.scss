@@ -54,4 +54,13 @@
   color: $text-light-color;
   padding-top: 16px;
   margin-top: 16px;
+  font-size: 13px;
+
+  > div {
+    display: flex;
+
+    > p {
+      align-self: center;
+    }
+  }
 }

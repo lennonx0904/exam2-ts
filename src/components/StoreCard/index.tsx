@@ -1,3 +1,4 @@
+import { Icon } from "assets";
 import "./style.scss";
 
 const StoreCard = () => {
@@ -14,15 +15,24 @@ const StoreCard = () => {
             beast.
           </p>
           <div className="tag-row">
-            <div className="tag">tag1: Poochyena </div>
-            <div className="tag">tag2: Honchkrow </div>
+            <div className="tag">Poochyena </div>
+            <div className="tag">Honchkrow </div>
           </div>
         </div>
 
         <div className="info">
-          <div className="time">time: 05:15 - 23:00</div>
-          <div className="phone">+2604430964574</div>
-          <div className="address">address: 489 Oma Turnpike</div>
+          <div className="time">
+            <img src={Icon.time} className="" alt="time" />
+            <p className="time">05:15-23:00</p>
+          </div>
+          <div className="phone">
+            <img src={Icon.phone} className="" alt="location" />
+            <p>+2604430964574</p>
+          </div>
+          <div className="address">
+            <img src={Icon.location} className="" alt="location" />
+            <p>489 Oma Turnpike</p>
+          </div>
         </div>
       </div>
     </div>

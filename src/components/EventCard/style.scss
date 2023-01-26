@@ -50,9 +50,5 @@
   .info {
     @include info-block;
     justify-content: space-between;
-
-    > div {
-      display: flex;
-    }
   }
 }

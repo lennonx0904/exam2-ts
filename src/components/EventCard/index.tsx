@@ -29,12 +29,11 @@ const EventCard = () => {
         <div className="info">
           <div>
             <img src={Icon.time} className="" alt="time" />
-            <div className="time">05:15 - 23:00</div>
+            <p className="time">05:15 - 23:00</p>
           </div>
-
           <div>
             <img src={Icon.location} className="" alt="location" />
-            <div className="address">489 Oma Turnpike</div>
+            <p className="address">489 Oma Turnpike</p>
           </div>
         </div>
       </div>
