@@ -1,4 +1,5 @@
 import { Navbar, Banner, StoreCard, EventCard, NewsCard } from "components";
+import StoreSection from "./StoreSection";
 
 import "./style.scss";
 
@@ -7,6 +8,7 @@ const MainPage = () => {
     <>
       <Navbar />
       <Banner />
+      <StoreSection />
       {/* <StoreCard />
       <EventCard />
       <NewsCard /> */}

@@ -1,0 +1,25 @@
+@import "styles/color";
+
+.store-section {
+  background-color: $gray-1;
+  padding: 50px 125px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .btn {
+      cursor: pointer;
+      background-color: $black;
+      color: $white;
+      border-radius: 8px;
+      padding: 6px 8px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -2,10 +2,10 @@
 
 .store-card-container {
   @include card-container;
-  max-width: 328px;
+  width: 30%;
 
   img {
-    max-width: 328px;
+    width: 100%;
     border-radius: 8px 8px 0 0;
   }
 
