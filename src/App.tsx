@@ -1,4 +1,4 @@
-import MainPage from "container";
+import MainPage from "pages";
 
 import "./App.scss";
 

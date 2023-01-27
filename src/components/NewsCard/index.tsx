@@ -1,19 +1,26 @@
+import moment from "moment";
+
+import { NewsProps } from "interface";
 import "./style.scss";
 
-const NewsCard = () => {
+const NewsCard = (props: NewsProps) => {
+  const {
+    title,
+    description,
+    date: { date },
+  } = props;
+
+  const releaseDate = moment(date).format("YYYY-MM-DD");
+
   return (
     <div className="news-card-container">
       <div className="header-row">
         <div>D&A Hostel</div>
-        <div className="date">2019-11-29</div>
+        <div className="date">{releaseDate}</div>
       </div>
 
-      <div className="title">title: Verniestad</div>
-      <p className="description">
-        description: "I learn music.' 'Ah! that accounts for it,' said the March
-        Hare said--' 'I didn't!' the March Hare. 'Sixteenth,' added the March
-        Hare went on. 'We had the best way to explain the mistake it had.",
-      </p>
+      <div className="title">{title}</div>
+      <p className="description">{description}</p>
     </div>
   );
 };

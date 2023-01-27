@@ -1,39 +1,54 @@
+import moment from "moment";
+
 import { Icon } from "assets";
+import { EventProps } from "interface";
 import "./style.scss";
 
-const EventCard = () => {
+const EventCard = (props: EventProps) => {
+  const {
+    title,
+    description,
+    image,
+    tag1,
+    tag2,
+    tag3,
+    address,
+    date: { date },
+  } = props;
+
+  const eventDate = moment(date).format("YYYY-MM-DD");
+  const startTime = moment(date).format("HH:mm");
+  const endTime = moment(date).add(8, "hours").format("HH:mm");
+
+  console.log("#eventDate", eventDate);
+
   return (
     <div className="event-card-container">
-      <img src="http://placeimg.com/640/480/any" alt="" />
+      <img src={image} alt="" />
 
       <div className="text-block">
         <div className="date-row">
-          <div className="date">2019-11-29</div>
+          <div className="date">{eventDate}</div>
         </div>
 
         <div className="main">
-          <div className="title">Blickchester</div>
-          <p className="description">
-            description: "I learn music.' 'Ah! that accounts for it,' said the
-            March Hare said--' 'I didn't!' the March Hare. 'Sixteenth,' added
-            the March Hare went on. 'We had the best way to explain the mistake
-            it had.",
-          </p>
+          <div className="title">{title}</div>
+          <p className="description">{description}</p>
           <div className="tag-row">
-            <div className="tag">Poochyena</div>
-            <div className="tag">Honchkrow</div>
-            <div className="tag">Shellder</div>
+            <div className="tag">{tag1}</div>
+            <div className="tag">{tag2}</div>
+            <div className="tag">{tag3}</div>
           </div>
         </div>
 
         <div className="info">
           <div>
             <img src={Icon.time} className="" alt="time" />
-            <p className="time">05:15 - 23:00</p>
+            <p className="time">{`${startTime}-${endTime}`}</p>
           </div>
           <div>
             <img src={Icon.location} className="" alt="location" />
-            <p className="address">489 Oma Turnpike</p>
+            <p>{address}</p>
           </div>
         </div>
       </div>

@@ -1,8 +1,14 @@
+import { useContext } from "react";
+
 import { EventCard, NewsCard } from "components";
+import { MainPageContext } from "context";
+import { MainPageProps } from "interface";
 
 import "./eventAndNews.scss";
 
 const EventAndNewsSection = () => {
+  const { events, news } = useContext<MainPageProps>(MainPageContext);
+
   return (
     <div className="event-news-section">
       <div className="event-column">
@@ -11,11 +17,10 @@ const EventAndNewsSection = () => {
           <div className="btn">More</div>
         </div>
         <div className="cards">
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
-          <EventCard />
+          {events.map((event) => {
+            const { uuid } = event;
+            return <EventCard key={uuid} {...event} />;
+          })}
         </div>
       </div>
 
@@ -25,10 +30,10 @@ const EventAndNewsSection = () => {
           <div className="btn">More</div>
         </div>
         <div className="cards">
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          {news.map((news) => {
+            const { uuid } = news;
+            return <NewsCard key={uuid} {...news} />;
+          })}
         </div>
       </div>
     </div>

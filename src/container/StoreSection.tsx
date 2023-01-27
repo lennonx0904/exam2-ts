@@ -1,8 +1,13 @@
-import { StoreCard } from "components";
+import { useContext } from "react";
 
+import { StoreCard } from "components";
+import { MainPageContext } from "context";
+import { MainPageProps } from "interface";
 import "./store.scss";
 
 const StoreSection = () => {
+  const { stores } = useContext<MainPageProps>(MainPageContext);
+
   return (
     <div className="store-section">
       <div className="header">
@@ -10,9 +15,10 @@ const StoreSection = () => {
         <div className="btn">More</div>
       </div>
       <div className="cards">
-        <StoreCard />
-        <StoreCard />
-        <StoreCard />
+        {stores.map((store) => {
+          const { uuid } = store;
+          return <StoreCard key={uuid} {...store} />;
+        })}
       </div>
     </div>
   );
