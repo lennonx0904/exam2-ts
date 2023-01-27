@@ -12,7 +12,6 @@ const StoreCard = (props: StoreProps) => {
     phone,
     tag1,
     tag2,
-    tag3,
     address,
     date: { date },
   } = props;
@@ -30,7 +29,6 @@ const StoreCard = (props: StoreProps) => {
           <div className="tag-row">
             <div className="tag">{tag1}</div>
             <div className="tag">{tag2}</div>
-            <div className="tag">{tag3}</div>
           </div>
         </div>
 

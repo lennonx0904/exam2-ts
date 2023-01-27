@@ -11,7 +11,6 @@ const EventCard = (props: EventProps) => {
     image,
     tag1,
     tag2,
-    tag3,
     address,
     date: { date },
   } = props;
@@ -20,11 +19,11 @@ const EventCard = (props: EventProps) => {
   const startTime = moment(date).format("HH:mm");
   const endTime = moment(date).add(8, "hours").format("HH:mm");
 
-  console.log("#eventDate", eventDate);
-
   return (
     <div className="event-card-container">
-      <img src={image} alt="" />
+      <div className="img-container">
+        <img src={image} alt="" />
+      </div>
 
       <div className="text-block">
         <div className="date-row">
@@ -37,7 +36,6 @@ const EventCard = (props: EventProps) => {
           <div className="tag-row">
             <div className="tag">{tag1}</div>
             <div className="tag">{tag2}</div>
-            <div className="tag">{tag3}</div>
           </div>
         </div>
 

@@ -1,13 +1,18 @@
 @import "styles/color";
+@import "styles/screenSize";
 
 .store-section {
   background-color: $gray-3;
-  padding: 50px 125px;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    width: 80%;
 
     .btn {
       cursor: pointer;
@@ -21,17 +26,29 @@
   .cards {
     display: flex;
     justify-content: space-between;
+    width: 80%;
   }
 }
 
 .event-news-section {
   display: flex;
   background-color: $gray-1;
-  padding: 50px 125px;
+  padding: 50px 0;
 
-  // TODO: RWD
-  .event-column {
-    margin-right: 24px;
+  justify-content: center;
+
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+
+    .event-column {
+      width: 67%;
+    }
+
+    .news-column {
+      width: 30%;
+    }
   }
 
   .header {
@@ -57,6 +74,88 @@
   .cards {
     > div {
       margin-bottom: 16px;
+    }
+  }
+}
+
+@media (max-width: calc(#{$large-screen} - 1px)) and (min-width: $medium-screen) {
+  .store-section {
+    background-color: $gray-3;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      width: 85%;
+      .btn {
+        cursor: pointer;
+        background-color: $black;
+        color: $white;
+        border-radius: 8px;
+        padding: 6px 8px;
+      }
+    }
+
+    .cards {
+      width: 85%;
+    }
+  }
+
+  .event-news-section {
+    .main-section {
+      width: 85%;
+    }
+  }
+}
+
+@media (max-width: calc(#{$medium-screen} - 1px)) {
+  .store-section {
+    .header {
+      width: 90%;
+    }
+
+    .cards {
+      width: 90%;
+    }
+  }
+
+  .event-news-section {
+    .main-section {
+      width: 90%;
+    }
+
+    .header {
+      > p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: $small-screen) {
+  .store-section {
+    padding: 20px 0;
+
+    .cards {
+      display: block;
+    }
+  }
+
+  .event-news-section {
+    background-color: $gray-1;
+    padding: 50px 0;
+
+    justify-content: center;
+
+    .main-section {
+      display: block;
+      width: 90%;
+
+      .event-column,
+      .news-column {
+        width: 100%;
+      }
     }
   }
 }

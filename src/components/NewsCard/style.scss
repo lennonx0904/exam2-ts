@@ -1,12 +1,10 @@
 @import "styles/mixin";
 @import "styles/color";
+@import "styles/screenSize";
 
 .news-card-container {
   @include card-container;
   padding: 16px;
-
-  // temp
-  width: 328px;
 
   .header-row {
     display: flex;
@@ -26,5 +24,17 @@
   .description {
     @include card-description;
     margin-bottom: 0;
+  }
+}
+
+@media (max-width: calc(#{$medium-screen} - 1px)) {
+  .news-card-container {
+    .header-row {
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-size: 14px;
+    }
   }
 }

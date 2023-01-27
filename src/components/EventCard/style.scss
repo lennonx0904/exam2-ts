@@ -1,13 +1,18 @@
 @import "styles/mixin";
+@import "styles/screenSize";
 
 .event-card-container {
   @include card-container;
   display: flex;
-  max-height: 257px;
 
-  img {
-    max-height: 257px;
-    border-radius: 8px 0 0 8px;
+  .img-container {
+    width: 40%;
+
+    > img {
+      border-radius: 8px 0 0 8px;
+      height: 100%;
+      width: -webkit-fill-available;
+    }
   }
 
   .text-block {
@@ -23,10 +28,6 @@
       color: gray;
       font-weight: 700;
     }
-
-    .tag {
-      @include green-tag;
-    }
   }
 
   .main {
@@ -40,6 +41,7 @@
 
     .tag-row {
       display: flex;
+      flex-wrap: wrap;
 
       .tag {
         @include gray-tag;

@@ -1,39 +1,78 @@
 @import "styles/mixin";
 @import "styles/color";
+@import "styles/screenSize";
 
-.navbar {
+.navbar-container {
   display: flex;
-  height: 64px;
-  padding: 0 125px;
+  justify-content: center;
 
-  .logo {
-    @include card-title;
-    align-self: center;
-  }
-
-  .nav-content {
+  .navbar {
     display: flex;
-    margin-left: 120px;
+    height: 64px;
+    width: 80%;
 
-    > div {
-      color: $navbar-item;
-      font-size: 14px;
-      align-self: center;
-      margin-right: 24px;
-      cursor: pointer;
-      line-height: 64px;
-      height: 64px;
-      box-sizing: content-box;
+    .menu {
+      display: none;
     }
 
-    .current {
-      border-bottom: 4px solid $black;
-      height: 60px;
+    .logo {
+      @include card-title;
+      align-self: center;
+    }
+
+    .nav-content {
+      display: flex;
+      margin-left: 120px;
+
+      > div {
+        color: $navbar-item;
+        font-size: 14px;
+        align-self: center;
+        margin-right: 24px;
+        cursor: pointer;
+        line-height: 64px;
+        height: 64px;
+        box-sizing: content-box;
+      }
+
+      .current {
+        border-bottom: 4px solid $black;
+        height: 60px;
+      }
+    }
+
+    .avatar {
+      margin-left: auto;
+      align-self: center;
     }
   }
+}
 
-  .avatar {
-    margin-left: auto;
-    align-self: center;
+@media (max-width: $small-screen) {
+  .navbar-container {
+    .navbar {
+      width: 100%;
+      justify-content: space-between;
+      padding: 0 16px;
+
+      .menu {
+        display: block;
+        align-self: center;
+        cursor: pointer;
+
+        > img {
+          height: 18px;
+          width: 18px;
+        }
+      }
+
+      .nav-content {
+        display: none;
+      }
+
+      .avatar {
+        margin-left: unset;
+      }
+    }
   }
 }

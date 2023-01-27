@@ -11,29 +11,32 @@ const EventAndNewsSection = () => {
 
   return (
     <div className="event-news-section">
-      <div className="event-column">
-        <div className="header">
-          <p>Events</p>
-          <div className="btn">More</div>
-        </div>
-        <div className="cards">
-          {events.map((event) => {
-            const { uuid } = event;
-            return <EventCard key={uuid} {...event} />;
-          })}
-        </div>
-      </div>
+      <div className="main-section">
 
-      <div className="column">
-        <div className="header">
-          <p>News & Bulletin</p>
-          <div className="btn">More</div>
+        <div className="event-column">
+          <div className="header">
+            <p>Events</p>
+            <div className="btn">More</div>
+          </div>
+          <div className="cards">
+            {events.map((event) => {
+              const { uuid } = event;
+              return <EventCard key={uuid} {...event} />;
+            })}
+          </div>
         </div>
-        <div className="cards">
-          {news.map((news) => {
-            const { uuid } = news;
-            return <NewsCard key={uuid} {...news} />;
-          })}
+
+        <div className="news-column">
+          <div className="header">
+            <p>News & Bulletin</p>
+            <div className="btn">More</div>
+          </div>
+          <div className="cards">
+            {news.map((news) => {
+              const { uuid } = news;
+              return <NewsCard key={uuid} {...news} />;
+            })}
+          </div>
         </div>
       </div>
     </div>
