@@ -4,7 +4,7 @@ import { EventCard, NewsCard } from "components";
 import { MainPageContext } from "context";
 import { MainPageProps } from "interface";
 
-import "./eventAndNews.scss";
+import "./style.scss";
 
 const EventAndNewsSection = () => {
   const { events, news } = useContext<MainPageProps>(MainPageContext);

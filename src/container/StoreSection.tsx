@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { StoreCard } from "components";
 import { MainPageContext } from "context";
 import { MainPageProps } from "interface";
-import "./store.scss";
+import "./style.scss";
 
 const StoreSection = () => {
   const { stores } = useContext<MainPageProps>(MainPageContext);

@@ -1,8 +1,6 @@
 import { Navbar, Banner } from "components";
-import StoreSection from "./StoreSection";
-import EventAndNewsSection from "./EventAndNewsSection";
-
-import "./style.scss";
+import StoreSection from "./storeSection";
+import EventAndNewsSection from "./eventAndNews";
 
 const MainPage = () => {
   return (
