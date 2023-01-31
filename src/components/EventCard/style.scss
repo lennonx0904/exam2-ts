@@ -1,7 +1,11 @@
 @import "styles/mixin";
 @import "styles/screenSize";
 
-.event-card-container {
+.event-card-container-vertical {
+  display: none;
+}
+
+.event-card-container-horizontal {
   @include card-container;
   display: flex;
 
@@ -52,5 +56,58 @@
   .info {
     @include info-block;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: $small-screen) {
+  .event-card-container-horizontal {
+    display: none;
+  }
+
+  .event-card-container-vertical {
+    display: block;
+    background-color: yellow;
+
+    width: 30%;
+
+    > img {
+      width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .text-block {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main {
+      .title {
+        @include card-title;
+      }
+
+      .description {
+        @include card-description;
+      }
+
+      .tag-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag {
+          @include gray-tag;
+        }
+      }
+    }
+
+    @include card-container;
+    width: 100%;
+    margin-bottom: 16px;
+
+    .info {
+      @include info-block;
+      display: block;
+      width: 100%;
+    }
   }
 }

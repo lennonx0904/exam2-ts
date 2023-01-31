@@ -20,37 +20,69 @@ const EventCard = (props: EventProps) => {
   const endTime = moment(date).add(8, "hours").format("HH:mm");
 
   return (
-    <div className="event-card-container">
-      <div className="img-container">
+    <>
+      <div className="event-card-container-horizontal">
+        <div className="img-container">
+          <img src={image} alt="" />
+        </div>
+
+        <div className="text-block">
+          <div className="date-row">
+            <div className="date">{eventDate}</div>
+          </div>
+
+          <div className="main">
+            <div className="title">{title}</div>
+            <p className="description">{description}</p>
+            <div className="tag-row">
+              <div className="tag">{tag1}</div>
+              <div className="tag">{tag2}</div>
+            </div>
+          </div>
+
+          <div className="info">
+            <div>
+              <img src={Icon.time} className="" alt="time" />
+              <p className="time">{`${startTime}-${endTime}`}</p>
+            </div>
+            <div>
+              <img src={Icon.location} className="" alt="location" />
+              <p>{address}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="event-card-container-vertical">
         <img src={image} alt="" />
+
+        <div className="text-block">
+          <div className="date-row">
+            <div className="date">{eventDate}</div>
+          </div>
+
+          <div className="main">
+            <div className="title">{title}</div>
+            <p className="description">{description}</p>
+            <div className="tag-row">
+              <div className="tag">{tag1}</div>
+              <div className="tag">{tag2}</div>
+            </div>
+          </div>
+
+          <div className="info">
+            <div>
+              <img src={Icon.time} className="" alt="time" />
+              <p className="time">{`${startTime}-${endTime}`}</p>
+            </div>
+            <div>
+              <img src={Icon.location} className="" alt="location" />
+              <p>{address}</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div className="text-block">
-        <div className="date-row">
-          <div className="date">{eventDate}</div>
-        </div>
-
-        <div className="main">
-          <div className="title">{title}</div>
-          <p className="description">{description}</p>
-          <div className="tag-row">
-            <div className="tag">{tag1}</div>
-            <div className="tag">{tag2}</div>
-          </div>
-        </div>
-
-        <div className="info">
-          <div>
-            <img src={Icon.time} className="" alt="time" />
-            <p className="time">{`${startTime}-${endTime}`}</p>
-          </div>
-          <div>
-            <img src={Icon.location} className="" alt="location" />
-            <p>{address}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
