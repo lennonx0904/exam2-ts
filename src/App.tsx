@@ -3,11 +3,7 @@ import MainPage from "pages";
 import "./App.scss";
 
 function App() {
-  return (
-    <div className="App">
-      <MainPage />
-    </div>
-  );
+  return <MainPage />;
 }
 
 export default App;
